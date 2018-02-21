@@ -37,9 +37,8 @@
             this.aplicacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambioContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.asignacionPerfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.asignacionAplicacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asignacionPerfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesDeBitacoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generarReporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -113,33 +112,25 @@
             // asignacionesToolStripMenuItem
             // 
             this.asignacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.asignacionPerfilesToolStripMenuItem,
-            this.asignacionAplicacionesToolStripMenuItem,
-            this.asignaciónToolStripMenuItem});
+            this.asignaciónToolStripMenuItem,
+            this.asignacionPerfilesToolStripMenuItem});
             this.asignacionesToolStripMenuItem.Name = "asignacionesToolStripMenuItem";
             this.asignacionesToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
             this.asignacionesToolStripMenuItem.Text = "Asignaciones";
             // 
-            // asignacionPerfilesToolStripMenuItem
-            // 
-            this.asignacionPerfilesToolStripMenuItem.Name = "asignacionPerfilesToolStripMenuItem";
-            this.asignacionPerfilesToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
-            this.asignacionPerfilesToolStripMenuItem.Text = "Asignacion Perfiles";
-            this.asignacionPerfilesToolStripMenuItem.Click += new System.EventHandler(this.asignacionPerfilesToolStripMenuItem_Click);
-            // 
-            // asignacionAplicacionesToolStripMenuItem
-            // 
-            this.asignacionAplicacionesToolStripMenuItem.Name = "asignacionAplicacionesToolStripMenuItem";
-            this.asignacionAplicacionesToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
-            this.asignacionAplicacionesToolStripMenuItem.Text = "Asignacion Aplicaciones";
-            this.asignacionAplicacionesToolStripMenuItem.Click += new System.EventHandler(this.asignacionAplicacionesToolStripMenuItem_Click);
-            // 
             // asignaciónToolStripMenuItem
             // 
             this.asignaciónToolStripMenuItem.Name = "asignaciónToolStripMenuItem";
-            this.asignaciónToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
-            this.asignaciónToolStripMenuItem.Text = "Asignación Perfiles a Usuario";
+            this.asignaciónToolStripMenuItem.Size = new System.Drawing.Size(333, 26);
+            this.asignaciónToolStripMenuItem.Text = "Asignación de Aplicaciones a Perfiles ";
             this.asignaciónToolStripMenuItem.Click += new System.EventHandler(this.asignaciónToolStripMenuItem_Click);
+            // 
+            // asignacionPerfilesToolStripMenuItem
+            // 
+            this.asignacionPerfilesToolStripMenuItem.Name = "asignacionPerfilesToolStripMenuItem";
+            this.asignacionPerfilesToolStripMenuItem.Size = new System.Drawing.Size(333, 26);
+            this.asignacionPerfilesToolStripMenuItem.Text = "Asignacion Perfiles a Usuarios";
+            this.asignacionPerfilesToolStripMenuItem.Click += new System.EventHandler(this.asignacionPerfilesToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -189,7 +180,7 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
@@ -213,7 +204,6 @@
         private System.Windows.Forms.ToolStripMenuItem asignacionPerfilesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cambioContraseñaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem asignacionAplicacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem asignaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesDeBitacoraToolStripMenuItem;

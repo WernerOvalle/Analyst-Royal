@@ -43,6 +43,7 @@ namespace PrototipoSeguridad
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "ReporteDUP_ididusuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
 
         }

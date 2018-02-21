@@ -354,6 +354,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "GenerarReporte";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GenerarReporte";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -42,7 +42,7 @@ namespace PrototipoSeguridad
         {
             bloqueados();
             //comboBox_app();
-            comboBox_User();
+           // comboBox_User();
             string sql = "select count(U.id_usuario) as total from Usuario U ";
             MySqlCommand com = new MySqlCommand(sql, cn);
 
@@ -367,9 +367,9 @@ namespace PrototipoSeguridad
 
         private void Cmb_user_SelectedIndexChanged(object sender, EventArgs e)
         {
-            user = Cmb_user.Text;
-            getUser();
-            comboBox_app();
+            //user = Cmb_user.Text;
+            //getUser();
+            //comboBox_app();
 
         }
 

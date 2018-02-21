@@ -60,6 +60,7 @@
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.btn_reporte_bitacora);
             this.Name = "ReporteBitacora";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReporteBitacora";
             this.Load += new System.EventHandler(this.ReporteBitacora_Load);
             this.ResumeLayout(false);

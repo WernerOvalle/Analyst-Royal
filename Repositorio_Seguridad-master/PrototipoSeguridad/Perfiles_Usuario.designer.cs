@@ -55,7 +55,7 @@
             // 
             this.Cmb_id.FormattingEnabled = true;
             this.Cmb_id.Location = new System.Drawing.Point(103, 57);
-            this.Cmb_id.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Cmb_id.Margin = new System.Windows.Forms.Padding(4);
             this.Cmb_id.Name = "Cmb_id";
             this.Cmb_id.Size = new System.Drawing.Size(107, 24);
             this.Cmb_id.TabIndex = 0;
@@ -67,7 +67,7 @@
             // 
             this.Cmb_usuario.FormattingEnabled = true;
             this.Cmb_usuario.Location = new System.Drawing.Point(329, 57);
-            this.Cmb_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Cmb_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.Cmb_usuario.Name = "Cmb_usuario";
             this.Cmb_usuario.Size = new System.Drawing.Size(341, 24);
             this.Cmb_usuario.TabIndex = 1;
@@ -77,7 +77,7 @@
             // 
             this.Dgv_perfil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_perfil.Location = new System.Drawing.Point(29, 133);
-            this.Dgv_perfil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Dgv_perfil.Margin = new System.Windows.Forms.Padding(4);
             this.Dgv_perfil.Name = "Dgv_perfil";
             this.Dgv_perfil.Size = new System.Drawing.Size(318, 315);
             this.Dgv_perfil.TabIndex = 3;
@@ -91,7 +91,7 @@
             this.ID,
             this.Aplicaciones});
             this.Dgv_asignacion.Location = new System.Drawing.Point(741, 132);
-            this.Dgv_asignacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Dgv_asignacion.Margin = new System.Windows.Forms.Padding(4);
             this.Dgv_asignacion.Name = "Dgv_asignacion";
             this.Dgv_asignacion.Size = new System.Drawing.Size(320, 290);
             this.Dgv_asignacion.TabIndex = 10;
@@ -176,7 +176,7 @@
             this.Btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_edit.Image = ((System.Drawing.Image)(resources.GetObject("Btn_edit.Image")));
             this.Btn_edit.Location = new System.Drawing.Point(556, 427);
-            this.Btn_edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_edit.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_edit.Name = "Btn_edit";
             this.Btn_edit.Size = new System.Drawing.Size(87, 80);
             this.Btn_edit.TabIndex = 24;
@@ -189,7 +189,7 @@
             this.Btn_borrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_borrar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_borrar.Image")));
             this.Btn_borrar.Location = new System.Drawing.Point(701, 436);
-            this.Btn_borrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_borrar.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_borrar.Name = "Btn_borrar";
             this.Btn_borrar.Size = new System.Drawing.Size(85, 71);
             this.Btn_borrar.TabIndex = 22;
@@ -202,7 +202,7 @@
             this.Btn_removerTodo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_removerTodo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_removerTodo.Location = new System.Drawing.Point(559, 369);
-            this.Btn_removerTodo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_removerTodo.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_removerTodo.Name = "Btn_removerTodo";
             this.Btn_removerTodo.Size = new System.Drawing.Size(67, 53);
             this.Btn_removerTodo.TabIndex = 9;
@@ -215,7 +215,7 @@
             this.Btn_remover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_remover.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_remover.Location = new System.Drawing.Point(559, 303);
-            this.Btn_remover.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_remover.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_remover.Name = "Btn_remover";
             this.Btn_remover.Size = new System.Drawing.Size(67, 41);
             this.Btn_remover.TabIndex = 8;
@@ -228,7 +228,7 @@
             this.Btn_agregarTodo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_agregarTodo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_agregarTodo.Location = new System.Drawing.Point(559, 182);
-            this.Btn_agregarTodo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_agregarTodo.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_agregarTodo.Name = "Btn_agregarTodo";
             this.Btn_agregarTodo.Size = new System.Drawing.Size(67, 53);
             this.Btn_agregarTodo.TabIndex = 7;
@@ -241,14 +241,14 @@
             this.Btn_agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_agregar.Location = new System.Drawing.Point(559, 133);
-            this.Btn_agregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_agregar.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_agregar.Name = "Btn_agregar";
             this.Btn_agregar.Size = new System.Drawing.Size(67, 41);
             this.Btn_agregar.TabIndex = 6;
             this.Btn_agregar.UseVisualStyleBackColor = true;
             this.Btn_agregar.Click += new System.EventHandler(this.Btn_agregar_Click);
             // 
-            // PerfilesUsuario
+            // Perfiles_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -270,8 +270,9 @@
             this.Controls.Add(this.Dgv_perfil);
             this.Controls.Add(this.Cmb_usuario);
             this.Controls.Add(this.Cmb_id);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "PerfilesUsuario";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "Perfiles_Usuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Asignacion Perfil Usuarios";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_perfil)).EndInit();

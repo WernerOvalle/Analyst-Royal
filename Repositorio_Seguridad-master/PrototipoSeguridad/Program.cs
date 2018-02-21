@@ -9,6 +9,7 @@ namespace PrototipoSeguridad
     static class Globales
     {
         public static string nom_usuario;
+        public static string nom_apli;
         public static string sAccionG = "Guardar";
         public static string sAccionD = "Eliminar";
         public static string sAccionE = "Editar";

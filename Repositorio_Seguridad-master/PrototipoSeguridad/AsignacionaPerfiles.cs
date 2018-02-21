@@ -2,6 +2,7 @@
 using System;
 using System.Data;
 using System.Data.Odbc;
+using System.Net;
 using System.Windows.Forms;
 
 
@@ -26,6 +27,30 @@ namespace PrototipoSeguridad
 
         }
 
+        public void obtenerIP()
+        {
+            IPHostEntry host;
+
+            host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (IPAddress ip in host.AddressList)
+            {
+                if (ip.AddressFamily.ToString() == "InterNetwork")
+                {
+                    localIP = ip.ToString();
+                }
+            }
+            //MessageBox.Show(localIP);
+        }
+
+        public static String s_error;
+        private string localIP;
+        private string error_nuevo;
+
+        public static String stringpad = "Driver ={ MySQL ODBC 3.51 Driver }; Dsn=servidor_seguridad; UID=root; PWD = ; Database=bd_seguridad; ";
+        bitacora_dll.bitacora_dll connection = new bitacora_dll.bitacora_dll(stringpad);
+
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
             this.dataGridView2.Columns[0].Visible = false;
@@ -48,7 +73,7 @@ namespace PrototipoSeguridad
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+              //  MessageBox.Show(ex.Message);
             }
             OdbcConnection conector = new OdbcConnection("Driver ={ MySQL ODBC 3.51 Driver }; Dsn=servidor_seguridad; UID=root; PWD = ; Database=bd_seguridad; ");
             conector.Open();
@@ -75,7 +100,7 @@ namespace PrototipoSeguridad
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("no encntrado. " + ex);
+               // MessageBox.Show("no encntrado. " + ex);
             }
             finally
             {
@@ -175,7 +200,7 @@ namespace PrototipoSeguridad
                 OdbcDataReader MyReader2;
                 MyConn2.Open();
                 MyReader2 = MyCommand2.ExecuteReader();
-                MessageBox.Show("Data Deleted");
+              //  MessageBox.Show("Data Deleted");
                 while (MyReader2.Read())
                 {
                 }
@@ -183,17 +208,23 @@ namespace PrototipoSeguridad
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+              //  MessageBox.Show(ex.Message);
             }
         }
 
         private void Btn_edit_Click(object sender, EventArgs e)
         {
-            Frm_MantenimientoApp maplicaciones = new Frm_MantenimientoApp();
-            //Principal fa = new Principal();
-            //maplicaciones.MdiParent = fa;
-            maplicaciones.Show();
+            Globales.nom_apli = dataGridView2.CurrentCell.Value.ToString();
 
+            //MessageBox.Show(Globales.nom_apli);
+            //MessageBox.Show(Globales.nom_usuario);
+            this.Hide();
+            Frm_MantenimientoApp mant_pp = new Frm_MantenimientoApp();
+            
+            mant_pp.Cmb_user.Text = Globales.nom_usuario.ToString();
+            mant_pp.Cmb_aplicacion.Text = Globales.nom_apli.ToString();
+
+            mant_pp.Show();
 
         }
 
@@ -204,6 +235,8 @@ namespace PrototipoSeguridad
 
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
+            String error_nuevo = ""; obtenerIP();
+            String app = "3";
             int selectedIndex = comboBox1.SelectedIndex ;
 
             for (int counter = 0; counter < (dataGridView2.Rows.Count) - 1;
@@ -222,18 +255,62 @@ namespace PrototipoSeguridad
                     OdbcDataReader MyReader2;
                     MyConn2.Open();
                     MyReader2 = MyCommand2.ExecuteReader();     // Here our query will be executed and data saved into the database.  
-                    MessageBox.Show("Save Data");
+                  //  MessageBox.Show("Save Data");
                     while (MyReader2.Read())
                     {
                     }
                     MyConn2.Close();
+                    MessageBox.Show("Datos Ingresados");
+                    connection.OpenConnection();
+                    connection.InsertarRegistro("insert into bitacora(id_usuario,fecha_bitacora,hora_bitacora,accion_usuario,id_aplicacion,resultado_bitacora,error_bitacora,ip_pc) values((select U.id_usuario from usuario U where U.usuario ='" + Globales.nom_usuario + "'), sysdate(), now(), '" + Globales.sAccionG + "', '" + app + "','" + Globales.sExitoso + "', '" + Globales.sError + "','" + localIP + "')");
+                    connection.CloseConnection();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    // MessageBox.Show(ex.Message);
+                    MessageBox.Show("Datos NO ingresados, verifique la información. " + ex.ToString());
+                    s_error = "." + ex.Message + ".";
+                    String[] A = s_error.Split(new char[] { '\'' }, StringSplitOptions.RemoveEmptyEntries);
+                    foreach (string i in A)
+                    {
+                        error_nuevo += i;
+                    }
+                    connection.OpenConnection();
+                    connection.InsertarRegistro("insert into bitacora(id_usuario,fecha_bitacora,hora_bitacora,accion_usuario,id_aplicacion,resultado_bitacora,error_bitacora,ip_pc) values((select U.id_usuario from usuario U where U.usuario ='" + Globales.nom_usuario + "'), sysdate(), now(), '" + Globales.sAccionG + "', '" + app + "','" + Globales.sExitoso_n + "', '" + error_nuevo + "','" + localIP + "')");
+                    connection.CloseConnection();
                 }
             }
 
+        }
+
+        private void Lbl_editar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Globales.nom_apli = dataGridView2.CurrentCell.Value.ToString();
+
+                //MessageBox.Show(Globales.nom_apli);
+                //MessageBox.Show(Globales.nom_usuario);
+                this.Hide();
+                Frm_MantenimientoApp mant_pp = new Frm_MantenimientoApp();
+
+            mant_pp.Cmb_user.ValueMember = Globales.nom_usuario;
+            mant_pp.Cmb_aplicacion.ValueMember = Globales.nom_apli;
+
+
+
+            mant_pp.Cmb_user.DisplayMember = Globales.nom_usuario;
+            mant_pp.Cmb_aplicacion.DisplayMember = Globales.nom_apli;
+            
+            mant_pp.Cmb_user.Text = Globales.nom_usuario.ToString();
+                mant_pp.Cmb_aplicacion.Text = Globales.nom_apli.ToString();
+
+                mant_pp.Show();
+            
+            
         }
     }
 }
