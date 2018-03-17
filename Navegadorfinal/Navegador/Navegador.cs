@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.IO;
+using System.Diagnostics;
 
 namespace Navegador
 {
@@ -44,10 +46,8 @@ namespace Navegador
         public event EventHandler NavActualizar;
         public event EventHandler NavEliminar;
         public event EventHandler NavGuardar;
-        public event EventHandler NavSiguiente;
-        public event EventHandler NavAnterior;
-        public event EventHandler NavPrimero;
-        public event EventHandler NavUltimo;
+        public event EventHandler NavAyuda;
+        
 
         public Navegador()
         {
@@ -140,6 +140,14 @@ namespace Navegador
             button4.Enabled = true;
             button5.Enabled = true;
             button6.Enabled = true;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (this.NavAyuda != null)
+                this.NavAyuda(this, e);
+         
+            Process.Start("Navegadorfinal\\Navegador_Manual.chm");
         }
     }
 }
