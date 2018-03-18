@@ -113,6 +113,16 @@ namespace Navegador.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Help_icon {
+            get {
+                object obj = ResourceManager.GetObject("Help-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Lock_Unlock_icon {
             get {
                 object obj = ResourceManager.GetObject("Lock-Unlock-icon", resourceCulture);
