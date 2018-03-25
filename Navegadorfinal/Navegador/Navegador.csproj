@@ -105,6 +105,21 @@
   <ItemGroup>
     <None Include="Resources\Help-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-file-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm-Error-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Cancel__Red_34208.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_system-software-update_24350.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_close_red_619539.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

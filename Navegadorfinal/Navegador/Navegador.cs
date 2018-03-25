@@ -47,7 +47,9 @@ namespace Navegador
         public event EventHandler NavEliminar;
         public event EventHandler NavGuardar;
         public event EventHandler NavAyuda;
-        
+        public event EventHandler NavSalir;
+
+
 
         public Navegador()
         {
@@ -148,6 +150,19 @@ namespace Navegador
                 this.NavAyuda(this, e);
          
             Process.Start("Navegadorfinal\\Navegador_Manual.chm");
+        }
+
+        private void Navegador_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (this.NavSalir != null)
+                this.NavSalir(this, e);
+
+
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -38,99 +39,137 @@
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Silver;
+            this.button9.BackgroundImage = global::Navegador.Properties.Resources.if_close_red_619539;
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Location = new System.Drawing.Point(561, 14);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(65, 42);
+            this.button9.TabIndex = 8;
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // button8
             // 
+            this.button8.BackColor = System.Drawing.Color.Silver;
             this.button8.BackgroundImage = global::Navegador.Properties.Resources.Help_icon;
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button8.Location = new System.Drawing.Point(499, 19);
+            this.button8.CausesValidation = false;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Location = new System.Drawing.Point(497, 14);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(58, 43);
             this.button8.TabIndex = 7;
-            this.button8.UseVisualStyleBackColor = true;
+            this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
-            this.button7.BackgroundImage = global::Navegador.Properties.Resources.Lock_Unlock_icon;
+            this.button7.BackColor = System.Drawing.Color.Silver;
+            this.button7.BackgroundImage = global::Navegador.Properties.Resources.if_Cancel__Red_34208;
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.Location = new System.Drawing.Point(30, 17);
+            this.button7.CausesValidation = false;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(296, 14);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(61, 43);
             this.button7.TabIndex = 6;
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click_1);
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.Color.Silver;
             this.button6.BackgroundImage = global::Navegador.Properties.Resources.print_icon;
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.Location = new System.Drawing.Point(432, 19);
+            this.button6.CausesValidation = false;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(430, 14);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(61, 43);
             this.button6.TabIndex = 5;
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.Silver;
             this.button5.BackgroundImage = global::Navegador.Properties.Resources.search_icon;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Location = new System.Drawing.Point(365, 19);
+            this.button5.CausesValidation = false;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(363, 14);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(61, 43);
             this.button5.TabIndex = 4;
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.Silver;
             this.button4.BackgroundImage = global::Navegador.Properties.Resources.Save_icon;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Location = new System.Drawing.Point(298, 19);
+            this.button4.CausesValidation = false;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(229, 14);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(61, 43);
             this.button4.TabIndex = 3;
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
-            this.button3.BackgroundImage = global::Navegador.Properties.Resources.File_Delete_icon;
+            this.button3.BackColor = System.Drawing.Color.Silver;
+            this.button3.BackgroundImage = global::Navegador.Properties.Resources.delete_file_icon;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(231, 19);
+            this.button3.CausesValidation = false;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(162, 14);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(61, 43);
             this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
-            this.button2.BackgroundImage = global::Navegador.Properties.Resources.Actions_edit_undo_icon;
+            this.button2.BackColor = System.Drawing.Color.Silver;
+            this.button2.BackgroundImage = global::Navegador.Properties.Resources.if_system_software_update_24350;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(164, 19);
+            this.button2.CausesValidation = false;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(95, 14);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(61, 43);
             this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Silver;
             this.button1.BackgroundImage = global::Navegador.Properties.Resources.Text_Edit_icon;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(97, 19);
+            this.button1.CausesValidation = false;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(28, 14);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(61, 43);
             this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Navegador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Transparent;
+            this.BackColor = System.Drawing.Color.DimGray;
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -140,7 +179,8 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Navegador";
-            this.Size = new System.Drawing.Size(584, 77);
+            this.Size = new System.Drawing.Size(648, 71);
+            this.Load += new System.EventHandler(this.Navegador_Load);
             this.ResumeLayout(false);
 
         }
@@ -155,5 +195,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
     }
 }
