@@ -8,69 +8,105 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Net;
+using dll_bitacora;
+
 namespace Navegador
 {
-
     public class Conector
-
     {
         private MySqlConnection conexion;
-        private string sConexion, server, db, user, pass, SQL;
+        private string sConexion, server, db, user, pass, AppNumero, SQL, AccionBoton, sNom_Usuario;
 
+
+        public static String stringpad = "Driver ={ MySQL ODBC 3.51 Driver }; Dsn=servidor_seguridad; UID=root; PWD = ; Database=bd_seguridad; ";
+        dll_bitacora.dll_bitacora connection = new dll_bitacora.dll_bitacora(stringpad);
 
         public Conector()
         {
         }
+        
+        static class Globaless
+        {
+            public static string Sexito = "Exitoso";
+            public static string Serror = "No";
+            public static string Nexito = "No exitoso";
+            public static string Nerror = "";
+        }
 
-        public Conector(string server, string db, string user, string pass, string SQL)
+        public void obtenerIP()
+        {
+            IPHostEntry host;
+
+            host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (IPAddress ip in host.AddressList)
+            {
+                if (ip.AddressFamily.ToString() == "InterNetwork")
+                {
+                    Globales.localIP = ip.ToString();
+                }
+            }
+        }
+
+        public Conector(string server, string db, string user, string pass, string sAppNumero, string SQL, string AccionBoton, string sNom_Usuario)
         {
             this.server = server;
             this.db = db;
             this.user = user;
             this.pass = pass;
+            this.AppNumero = sAppNumero;
             this.SQL = SQL;
+            this.AccionBoton = AccionBoton;
+            this.sNom_Usuario = sNom_Usuario;
         }
 
-
+        public static String s_error;
 
         public void OpenConnection()
         {
-
-
+            obtenerIP(); int App_Numero = Convert.ToInt16(AppNumero);
+            MessageBox.Show(Globales.AccionBoton);
             MessageBox.Show(Globales.SQL);
+            MessageBox.Show(Globales.localIP);
+            MessageBox.Show(Globaless.Sexito);
+            MessageBox.Show(Globaless.Serror);
+            MessageBox.Show(Globaless.Nexito);
+            MessageBox.Show(sNom_Usuario);
             sConexion = "SERVER=" + this.server + ";" + "DATABASE=" +
                 this.db + ";" + "UID=" + this.user + ";" + "PASSWORD=" + this.pass + ";";
-
-
-
             try
             {
-                //This is my connection string i have assigned the database file address path  
-                //This is my insert query in which i am taking input from the user through windows forms  
-                //This is  MySqlConnection here i have created the object and pass my connection string.  
                 MySqlConnection MyConn2 = new MySqlConnection(sConexion);
-                //This is command class which will handle the query and connection object.  
                 MySqlCommand MyCommand2 = new MySqlCommand(Globales.SQL, MyConn2);
                 MySqlDataReader MyReader2;
                 MyConn2.Open();
-                MyReader2 = MyCommand2.ExecuteReader();     // Here our query will be executed and data saved into the database.  
+                MyReader2 = MyCommand2.ExecuteReader();       
                 MessageBox.Show("Exito");
                 while (MyReader2.Read())
                 {
                 }
                 MyConn2.Close();
+                connection.OpenConnection();
+               // connection.InsertarRegistro("insert into bitacora(id_usuario,fecha_bitacora,hora_bitacora,accion_usuario,id_aplicacion,resultado_bitacora,error_bitacora,ip_pc) values((select U.id_usuario from usuario U where U.usuario ='" + sNom_Usuario + "'), sysdate(), now(), '" + Globales.AccionBoton + "', '" + AppNumero + "','" + Globaless.Sexito + "', '" + Globaless.Serror + "','" + Globales.localIP + "')");
+                connection.InsertarRegistro("insert into bitacora(id_usuario,fecha_bitacora,hora_bitacora,accion_usuario,id_aplicacion,resultado_bitacora,error_bitacora,ip_pc) values('" + sNom_Usuario + "', sysdate(), now(), '" + Globales.AccionBoton + "', '" + AppNumero + "','" + Globaless.Sexito + "', '" + Globaless.Serror + "','" + Globales.localIP + "')");
+                connection.CloseConnection();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                s_error = "." + ex.Message + ".";
+                String[] A = s_error.Split(new char[] { '\'' }, StringSplitOptions.RemoveEmptyEntries);
+                foreach (string i in A)
+                {
+                    Globaless.Nerror += i;
+                }
+                connection.OpenConnection();
+               // connection.InsertarRegistro("insert into bitacora(id_usuario,fecha_bitacora,hora_bitacora,accion_usuario,id_aplicacion,resultado_bitacora,error_bitacora,ip_pc) values((select U.id_usuario from usuario U where U.usuario ='" + sNom_Usuario + "'), sysdate(), now(), '" + Globales.sAccionG + "', '" + app + "','" + Globales.sExitoso_n + "', '" + error_nuevo + "','" + localIP + "')");
+                connection.InsertarRegistro("insert into bitacora(id_usuario,fecha_bitacora,hora_bitacora,accion_usuario,id_aplicacion,resultado_bitacora,error_bitacora,ip_pc) values('" + sNom_Usuario + "', sysdate(), now(), '" + Globales.AccionBoton + "', '" + AppNumero + "','" + Globaless.Nexito + "', '" + Globaless.Nerror + "','" + Globales.localIP + "')");
+                connection.CloseConnection();
             }
         }
-
-
-
-
-
-        //Close connection
+        
         public void CloseConnection()
         {
             try

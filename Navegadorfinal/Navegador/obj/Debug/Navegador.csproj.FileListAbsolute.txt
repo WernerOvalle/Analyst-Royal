@@ -29,3 +29,14 @@ C:\Users\werne\Documents\Github\Analyst-Royal\Navegadorfinal\Navegador\obj\Debug
 C:\Users\werne\Documents\Github\Analyst-Royal\Navegadorfinal\Navegador\obj\Debug\Navegador.csproj.CoreCompileInputs.cache
 C:\Users\werne\Documents\Github\Analyst-Royal\Navegadorfinal\Navegador\obj\Debug\Navegador.dll
 C:\Users\werne\Documents\Github\Analyst-Royal\Navegadorfinal\Navegador\obj\Debug\Navegador.pdb
+C:\Users\kimbe\Desktop\Analyst-Royal-master\Analyst-Royal-master\Navegadorfinal\Navegador\bin\Debug\Navegador.dll
+C:\Users\kimbe\Desktop\Analyst-Royal-master\Analyst-Royal-master\Navegadorfinal\Navegador\bin\Debug\Navegador.pdb
+C:\Users\kimbe\Desktop\Analyst-Royal-master\Analyst-Royal-master\Navegadorfinal\Navegador\bin\Debug\MySql.Data.dll
+C:\Users\kimbe\Desktop\Analyst-Royal-master\Analyst-Royal-master\Navegadorfinal\Navegador\bin\Debug\MySql.Data.xml
+C:\Users\kimbe\Desktop\Analyst-Royal-master\Analyst-Royal-master\Navegadorfinal\Navegador\obj\Debug\Navegador.Navegador.resources
+C:\Users\kimbe\Desktop\Analyst-Royal-master\Analyst-Royal-master\Navegadorfinal\Navegador\obj\Debug\Navegador.Properties.Resources.resources
+C:\Users\kimbe\Desktop\Analyst-Royal-master\Analyst-Royal-master\Navegadorfinal\Navegador\obj\Debug\Navegador.csproj.GenerateResource.Cache
+C:\Users\kimbe\Desktop\Analyst-Royal-master\Analyst-Royal-master\Navegadorfinal\Navegador\obj\Debug\Navegador.dll
+C:\Users\kimbe\Desktop\Analyst-Royal-master\Analyst-Royal-master\Navegadorfinal\Navegador\obj\Debug\Navegador.pdb
+C:\Users\kimbe\Desktop\Analyst-Royal-master\Analyst-Royal-master\Navegadorfinal\Navegador\bin\Debug\dll_bitacora.dll
+C:\Users\kimbe\Desktop\Analyst-Royal-master\Analyst-Royal-master\Navegadorfinal\Navegador\bin\Debug\dll_bitacora.pdb

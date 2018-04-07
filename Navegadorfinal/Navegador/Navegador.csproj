@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="dll_bitacora">
+      <HintPath>..\..\..\..\BITACORA FINAL\dll_bitacora\dll_bitacora\bin\Debug\dll_bitacora.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\Connector.NET 6.9\Assemblies\v4.5\MySql.Data.dll</HintPath>
@@ -119,6 +122,66 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\if_close_red_619539.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagenes - Copy %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagenes - Copy %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagenes - Copy %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagenes - Copy %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagenes - Copy %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar-cancelar-icono-4935-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagenes - Copy %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout_37127.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconos-milky-7 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconos-milky-7 - Copy %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconos-milky-7 - Copy %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconos-milky-7 - Copy %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconos-milky-7 - Copy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconos-milky-7 - Copy %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconos-milky-7 - Copy %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconos-milky-7 - Copy %284%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-1294469_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-1294469_960_7201.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
