@@ -58,13 +58,18 @@ namespace Navegador
         private void button1_Click(object sender, EventArgs e)
         {
             button2.Enabled = false;
-            this.button2.BackColor = Color.FromName("DimGray");
+            button2.Image = Properties.Resources._2;
             button3.Enabled = false;
-            this.button3.BackColor = Color.FromName("DimGray");
+            button3.Image = Properties.Resources._3;
             button5.Enabled = false;
-            this.button5.BackColor = Color.FromName("DimGray");
+            button5.Image = Properties.Resources._10;
             button6.Enabled = false;
-            this.button6.BackColor = Color.FromName("DimGray");
+            button6.Image = Properties.Resources._11;
+            button4.Enabled = true;
+            button4.Image = Properties.Resources.icons8_Save_48px;
+            button7.Enabled = true;
+            button7.Image = Properties.Resources.icons8_Cancel_48px;
+
             insert = new INSERCION(sNombreTabla);
             insert.empezandosql();
             insert.action();
@@ -75,13 +80,18 @@ namespace Navegador
         private void button2_Click(object sender, EventArgs e)
         {
             button1.Enabled = false;
-            this.button1.BackColor = Color.FromName("DimGray");
+            button1.Image = Properties.Resources._1;
             button3.Enabled = false;
-            this.button3.BackColor = Color.FromName("DimGray");
+            button3.Image = Properties.Resources._3;
             button5.Enabled = false;
-            this.button5.BackColor = Color.FromName("DimGray");
+            button5.Image = Properties.Resources._10;
             button6.Enabled = false;
-            this.button6.BackColor = Color.FromName("DimGray");
+            button6.Image = Properties.Resources._11;
+            button4.Enabled = true;
+            button4.Image = Properties.Resources.icons8_Save_48px;
+            button7.Enabled = true;
+            button7.Image = Properties.Resources.icons8_Cancel_48px;
+
             update = new ACTUALIZAR(sNombreTabla);
             update.empezandosql();
             update.action();
@@ -91,6 +101,7 @@ namespace Navegador
 
         private void button4_Click(object sender, EventArgs e)
         {
+            
             if (this.NavGuardar != null)
                 this.NavGuardar(this, e);
             con = new Conector(sServidor, sNombreBD, sUsuario, sPass, sAppNumero, Globales.SQL, Globales.AccionBoton, sNom_Usuario);
@@ -100,9 +111,18 @@ namespace Navegador
         private void button3_Click(object sender, EventArgs e)
         {
             button1.Enabled = false;
-            this.button1.BackColor = Color.FromName("DimGray");
+            button1.Image = Properties.Resources._1;
             button2.Enabled = false;
-            this.button2.BackColor = Color.FromName("DimGray");
+            button2.Image = Properties.Resources._2;
+            button5.Enabled = false;
+            button5.Image = Properties.Resources._10;
+            button6.Enabled = false;
+            button6.Image = Properties.Resources._11;
+            button4.Enabled = true;
+            button4.Image = Properties.Resources.icons8_Save_48px;
+            button7.Enabled = true;
+            button7.Image = Properties.Resources.icons8_Cancel_48px;
+
             delete = new ELIMINAR(sNombreTabla);
             delete.empezandosql();
             delete.action();
@@ -113,17 +133,17 @@ namespace Navegador
         private void button7_Click_1(object sender, EventArgs e)
         {
             button1.Enabled = true;
-            this.button1.BackColor = Color.FromName("Transparent");
+            button1.Image = Properties.Resources.icons8_Add_File_48px;
             button2.Enabled = true;
-            this.button2.BackColor = Color.FromName("Transparent");
+            button2.Image = Properties.Resources.icons8_Edit_File_48px;
             button3.Enabled = true;
-            this.button3.BackColor = Color.FromName("Transparent");
-            button4.Enabled = true;
-            this.button4.BackColor = Color.FromName("Transparent");
+            button3.Image = Properties.Resources.icons8_Delete_File_48px;
             button5.Enabled = true;
-            this.button5.BackColor = Color.FromName("Transparent");
+            button5.Image = Properties.Resources.icons8_Search_48px;
             button6.Enabled = true;
-            this.button6.BackColor = Color.FromName("Transparent");
+            button6.Image = Properties.Resources.icons8_Print_48px;
+            button7.Enabled = true;
+            button7.Image = Properties.Resources.icons8_Cancel_48px;
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -135,6 +155,11 @@ namespace Navegador
 
         private void Navegador_Load(object sender, EventArgs e)
         {
+            button4.Enabled = false;
+            button4.Image  = Properties.Resources.icons8_Save_48px;
+            button7.Enabled = false;
+            button7.Image = Properties.Resources.icons8_Cancel_48px; 
+
         }
 
         private void button9_Click(object sender, EventArgs e)

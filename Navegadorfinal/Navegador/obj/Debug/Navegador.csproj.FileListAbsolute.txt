@@ -40,3 +40,4 @@ C:\Users\kimbe\Desktop\Analyst-Royal-master\Analyst-Royal-master\Navegadorfinal\
 C:\Users\kimbe\Desktop\Analyst-Royal-master\Analyst-Royal-master\Navegadorfinal\Navegador\obj\Debug\Navegador.pdb
 C:\Users\kimbe\Desktop\Analyst-Royal-master\Analyst-Royal-master\Navegadorfinal\Navegador\bin\Debug\dll_bitacora.dll
 C:\Users\kimbe\Desktop\Analyst-Royal-master\Analyst-Royal-master\Navegadorfinal\Navegador\bin\Debug\dll_bitacora.pdb
+C:\Users\werne\Documents\Github\Analyst-Royal\Navegadorfinal\Navegador\bin\Debug\dll_bitacora.pdb
