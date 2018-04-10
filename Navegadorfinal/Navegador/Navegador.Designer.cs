@@ -168,7 +168,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(266, 50);
+            this.label10.Location = new System.Drawing.Point(313, 49);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(46, 9);
@@ -180,7 +180,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(313, 50);
+            this.label11.Location = new System.Drawing.Point(363, 49);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(47, 9);
@@ -192,13 +192,14 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(372, 50);
+            this.label12.Location = new System.Drawing.Point(266, 49);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(29, 9);
+            this.label12.Size = new System.Drawing.Size(37, 9);
             this.label12.TabIndex = 24;
-            this.label12.Text = "INICIO";
+            this.label12.Text = "    INICIO";
             this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label13
             // 
@@ -220,11 +221,12 @@
             this.button13.CausesValidation = false;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.ForeColor = System.Drawing.Color.Transparent;
-            this.button13.Location = new System.Drawing.Point(415, 3);
+            this.button13.Location = new System.Drawing.Point(415, 4);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(44, 43);
             this.button13.TabIndex = 21;
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button12
             // 
@@ -234,11 +236,12 @@
             this.button12.CausesValidation = false;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.ForeColor = System.Drawing.Color.Transparent;
-            this.button12.Location = new System.Drawing.Point(365, 3);
+            this.button12.Location = new System.Drawing.Point(265, 4);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(44, 43);
             this.button12.TabIndex = 20;
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button11
             // 
@@ -248,11 +251,12 @@
             this.button11.CausesValidation = false;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.ForeColor = System.Drawing.Color.Transparent;
-            this.button11.Location = new System.Drawing.Point(315, 3);
+            this.button11.Location = new System.Drawing.Point(366, 4);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(44, 43);
             this.button11.TabIndex = 19;
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button10
             // 
@@ -262,11 +266,12 @@
             this.button10.CausesValidation = false;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.ForeColor = System.Drawing.Color.Transparent;
-            this.button10.Location = new System.Drawing.Point(266, 3);
+            this.button10.Location = new System.Drawing.Point(315, 3);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(44, 43);
             this.button10.TabIndex = 18;
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 

@@ -65,13 +65,10 @@ namespace Navegador
         public void OpenConnection()
         {
             obtenerIP(); int App_Numero = Convert.ToInt16(AppNumero);
-            MessageBox.Show(Globales.AccionBoton);
+    
             MessageBox.Show(Globales.SQL);
-            MessageBox.Show(Globales.localIP);
-            MessageBox.Show(Globaless.Sexito);
-            MessageBox.Show(Globaless.Serror);
-            MessageBox.Show(Globaless.Nexito);
-            MessageBox.Show(sNom_Usuario);
+           
+  
             sConexion = "SERVER=" + this.server + ";" + "DATABASE=" +
                 this.db + ";" + "UID=" + this.user + ";" + "PASSWORD=" + this.pass + ";";
             try

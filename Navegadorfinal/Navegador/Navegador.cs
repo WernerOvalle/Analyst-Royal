@@ -39,6 +39,10 @@ namespace Navegador
         public event EventHandler NavActualizar;
         public event EventHandler NavEliminar;
         public event EventHandler NavGuardar;
+        public event EventHandler NavInicio;
+        public event EventHandler NavAnterior;
+        public event EventHandler NavSiguiente;
+        public event EventHandler NavFin;
         public event EventHandler NavAyuda;
         public event EventHandler NavSalir;
 
@@ -166,6 +170,35 @@ namespace Navegador
         {
             if (this.NavSalir != null)
                 this.NavSalir(this, e);
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (this.NavInicio != null)
+                this.NavInicio(this, e);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (this.NavAnterior != null)
+                this.NavAnterior(this, e);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (this.NavSiguiente != null)
+                this.NavSiguiente(this, e);
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if (this.NavFin != null)
+                this.NavFin(this, e);
         }
     }
 }
