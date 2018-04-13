@@ -61,7 +61,7 @@
             // navegador1
             // 
             this.navegador1.BackColor = System.Drawing.Color.Gainsboro;
-            this.navegador1.Location = new System.Drawing.Point(34, 37);
+            this.navegador1.Location = new System.Drawing.Point(36, 46);
             this.navegador1.Margin = new System.Windows.Forms.Padding(4);
             this.navegador1.Name = "navegador1";
             this.navegador1.sAppNumero = "6";
@@ -72,13 +72,16 @@
             this.navegador1.sPass = null;
             this.navegador1.sServidor = "localhost";
             this.navegador1.sUsuario = "root";
-            this.navegador1.TabIndex = 4;
+            this.navegador1.TabIndex = 5;
             this.navegador1.NavInsertar += new System.EventHandler(this.navegador1_NavInsertar);
             this.navegador1.NavActualizar += new System.EventHandler(this.navegador1_NavActualizar);
             this.navegador1.NavEliminar += new System.EventHandler(this.navegador1_NavEliminar);
             this.navegador1.NavGuardar += new System.EventHandler(this.navegador1_NavGuardar);
+            this.navegador1.NavInicio += new System.EventHandler(this.navegador1_NavInicio);
+            this.navegador1.NavAnterior += new System.EventHandler(this.navegador1_NavAnterior);
+            this.navegador1.NavSiguiente += new System.EventHandler(this.navegador1_NavSiguiente);
+            this.navegador1.NavFin += new System.EventHandler(this.navegador1_NavFin);
             this.navegador1.NavSalir += new System.EventHandler(this.navegador1_NavSalir);
-            this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
             // 
             // Clientess
             // 
