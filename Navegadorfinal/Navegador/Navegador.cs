@@ -6,7 +6,7 @@ using System.Diagnostics;
 
 
 namespace Navegador
-{
+{//werner creacion de las propiedad personalizadas
     public partial class Navegador : UserControl
     {
         [Description("Direccion servidor")]
@@ -30,11 +30,12 @@ namespace Navegador
         [Description("Nom usuario")]
         [Category("ParametrosBD")]
         public String sNom_Usuario { get; set; }
+
         private Conector con;
         private INSERCION insert;
         private ACTUALIZAR update;
         private ELIMINAR delete;
-
+        // werner creacion de eventos personalizados
         public event EventHandler NavInsertar;
         public event EventHandler NavActualizar;
         public event EventHandler NavEliminar;
@@ -43,6 +44,7 @@ namespace Navegador
         public event EventHandler NavAnterior;
         public event EventHandler NavSiguiente;
         public event EventHandler NavFin;
+        public event EventHandler NavCancelar;
         public event EventHandler NavAyuda;
         public event EventHandler NavSalir;
 
@@ -60,7 +62,7 @@ namespace Navegador
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {//werner boton insertar
             button2.Enabled = false;
             button2.Image = Properties.Resources._2;
             button3.Enabled = false;
@@ -82,7 +84,7 @@ namespace Navegador
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
+        {//werner boton actualizar
             button1.Enabled = false;
             button1.Image = Properties.Resources._1;
             button3.Enabled = false;
@@ -105,7 +107,7 @@ namespace Navegador
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
+            //werner boton guardar
             if (this.NavGuardar != null)
                 this.NavGuardar(this, e);
             con = new Conector(sServidor, sNombreBD, sUsuario, sPass, sAppNumero, Globales.SQL, Globales.AccionBoton, sNom_Usuario);
@@ -113,7 +115,7 @@ namespace Navegador
         }
 
         private void button3_Click(object sender, EventArgs e)
-        {
+        {//werner boton eliminar
             button1.Enabled = false;
             button1.Image = Properties.Resources._1;
             button2.Enabled = false;
@@ -135,7 +137,7 @@ namespace Navegador
         }
         
         private void button7_Click_1(object sender, EventArgs e)
-        {
+        {//werner boton cancelar
             button1.Enabled = true;
             button1.Image = Properties.Resources.icons8_Add_File_48px;
             button2.Enabled = true;
@@ -148,10 +150,12 @@ namespace Navegador
             button6.Image = Properties.Resources.icons8_Print_48px;
             button7.Enabled = true;
             button7.Image = Properties.Resources.icons8_Cancel_48px;
+            if (this.NavCancelar != null)
+                this.NavCancelar(this, e);
         }
 
         private void button8_Click(object sender, EventArgs e)
-        {
+        {//werner boton manual
             if (this.NavAyuda != null)
                 this.NavAyuda(this, e);
             Process.Start("Navegadorfinal\\Navegador_Manual.chm");
@@ -167,7 +171,7 @@ namespace Navegador
         }
 
         private void button9_Click(object sender, EventArgs e)
-        {
+        {//werner boton salir
             if (this.NavSalir != null)
                 this.NavSalir(this, e);
         }
@@ -176,7 +180,7 @@ namespace Navegador
         {
 
         }
-
+        //werner boton flechas
         private void button12_Click(object sender, EventArgs e)
         {
             if (this.NavInicio != null)

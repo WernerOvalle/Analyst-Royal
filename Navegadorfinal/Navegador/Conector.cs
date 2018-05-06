@@ -12,13 +12,13 @@ using System.Net;
 using dll_bitacora;
 
 namespace Navegador
-{
+{//werner variables de conexion 
     public class Conector
     {
         private MySqlConnection conexion;
         private string sConexion, server, db, user, pass, AppNumero, SQL, AccionBoton, sNom_Usuario;
 
-
+        //kimberly conexion para bitacora
         public static String stringpad = "Driver ={ MySQL ODBC 3.51 Driver }; Dsn=servidor_seguridad; UID=root; PWD = ; Database=bd_seguridad; ";
         dll_bitacora.dll_bitacora connection = new dll_bitacora.dll_bitacora(stringpad);
 
@@ -47,7 +47,7 @@ namespace Navegador
                 }
             }
         }
-
+        //werner ovalle obtener parametros
         public Conector(string server, string db, string user, string pass, string sAppNumero, string SQL, string AccionBoton, string sNom_Usuario)
         {
             this.server = server;
@@ -61,7 +61,7 @@ namespace Navegador
         }
 
         public static String s_error;
-
+        //werner inicion de conexion
         public void OpenConnection()
         {
             obtenerIP(); int App_Numero = Convert.ToInt16(AppNumero);
@@ -83,8 +83,8 @@ namespace Navegador
                 {
                 }
                 MyConn2.Close();
+                // kimberly alejandra insert a bitacora exito
                 connection.OpenConnection();
-               // connection.InsertarRegistro("insert into bitacora(id_usuario,fecha_bitacora,hora_bitacora,accion_usuario,id_aplicacion,resultado_bitacora,error_bitacora,ip_pc) values((select U.id_usuario from usuario U where U.usuario ='" + sNom_Usuario + "'), sysdate(), now(), '" + Globales.AccionBoton + "', '" + AppNumero + "','" + Globaless.Sexito + "', '" + Globaless.Serror + "','" + Globales.localIP + "')");
                 connection.InsertarRegistro("insert into bitacora(id_usuario,fecha_bitacora,hora_bitacora,accion_usuario,id_aplicacion,resultado_bitacora,error_bitacora,ip_pc) values('" + sNom_Usuario + "', sysdate(), now(), '" + Globales.AccionBoton + "', '" + AppNumero + "','" + Globaless.Sexito + "', '" + Globaless.Serror + "','" + Globales.localIP + "')");
                 connection.CloseConnection();
             }
@@ -97,13 +97,14 @@ namespace Navegador
                 {
                     Globaless.Nerror += i;
                 }
+                //kimberly alejandra insert bitacora erorr
                 connection.OpenConnection();
                // connection.InsertarRegistro("insert into bitacora(id_usuario,fecha_bitacora,hora_bitacora,accion_usuario,id_aplicacion,resultado_bitacora,error_bitacora,ip_pc) values((select U.id_usuario from usuario U where U.usuario ='" + sNom_Usuario + "'), sysdate(), now(), '" + Globales.sAccionG + "', '" + app + "','" + Globales.sExitoso_n + "', '" + error_nuevo + "','" + localIP + "')");
                 connection.InsertarRegistro("insert into bitacora(id_usuario,fecha_bitacora,hora_bitacora,accion_usuario,id_aplicacion,resultado_bitacora,error_bitacora,ip_pc) values('" + sNom_Usuario + "', sysdate(), now(), '" + Globales.AccionBoton + "', '" + AppNumero + "','" + Globaless.Nexito + "', '" + Globaless.Nerror + "','" + Globales.localIP + "')");
                 connection.CloseConnection();
             }
         }
-        
+        // werner cerrrar conexion
         public void CloseConnection()
         {
             try

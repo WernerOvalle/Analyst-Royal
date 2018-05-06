@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 namespace Navegador
 {
+    //kimberly variables bitacora
     static class Globales
     {
         public static string SQL;
@@ -35,7 +36,7 @@ namespace Navegador
             Globales.AccionBoton = "";
             Globales.AccionBoton = "Insertar"; 
         }
-
+// werner ovalle inciando slq del insert 
         public void empezandosql()
         {
             Globales.SQL = "INSERT INTO " + this.nombreTabla + "(";

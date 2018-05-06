@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Navegador
-{
+{// werner funcion eliminar  
     public class ELIMINAR
     {
         private string nombreTabla;
