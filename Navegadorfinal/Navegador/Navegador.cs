@@ -112,6 +112,7 @@ namespace Navegador
                 this.NavGuardar(this, e);
             con = new Conector(sServidor, sNombreBD, sUsuario, sPass, sAppNumero, Globales.SQL, Globales.AccionBoton, sNom_Usuario);
             con.OpenConnection();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)

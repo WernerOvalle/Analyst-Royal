@@ -65,7 +65,7 @@ namespace Navegador
         public void OpenConnection()
         {
             obtenerIP(); int App_Numero = Convert.ToInt16(AppNumero);
-    
+
             MessageBox.Show(Globales.SQL);
            
   
@@ -82,8 +82,9 @@ namespace Navegador
                 while (MyReader2.Read())
                 {
                 }
-                MyConn2.Close();
+               MyConn2.Close();
                 // kimberly alejandra insert a bitacora exito
+
                 connection.OpenConnection();
                 connection.InsertarRegistro("insert into bitacora(id_usuario,fecha_bitacora,hora_bitacora,accion_usuario,id_aplicacion,resultado_bitacora,error_bitacora,ip_pc) values('" + sNom_Usuario + "', sysdate(), now(), '" + Globales.AccionBoton + "', '" + AppNumero + "','" + Globaless.Sexito + "', '" + Globaless.Serror + "','" + Globales.localIP + "')");
                 connection.CloseConnection();
@@ -99,7 +100,7 @@ namespace Navegador
                 }
                 //kimberly alejandra insert bitacora erorr
                 connection.OpenConnection();
-               // connection.InsertarRegistro("insert into bitacora(id_usuario,fecha_bitacora,hora_bitacora,accion_usuario,id_aplicacion,resultado_bitacora,error_bitacora,ip_pc) values((select U.id_usuario from usuario U where U.usuario ='" + sNom_Usuario + "'), sysdate(), now(), '" + Globales.sAccionG + "', '" + app + "','" + Globales.sExitoso_n + "', '" + error_nuevo + "','" + localIP + "')");
+                // connection.InsertarRegistro("insert into bitacora(id_usuario,fecha_bitacora,hora_bitacora,accion_usuario,id_aplicacion,resultado_bitacora,error_bitacora,ip_pc) values((select U.id_usuario from usuario U where U.usuario ='" + sNom_Usuario + "'), sysdate(), now(), '" + Globales.sAccionG + "', '" + app + "','" + Globales.sExitoso_n + "', '" + error_nuevo + "','" + localIP + "')");
                 connection.InsertarRegistro("insert into bitacora(id_usuario,fecha_bitacora,hora_bitacora,accion_usuario,id_aplicacion,resultado_bitacora,error_bitacora,ip_pc) values('" + sNom_Usuario + "', sysdate(), now(), '" + Globales.AccionBoton + "', '" + AppNumero + "','" + Globaless.Nexito + "', '" + Globaless.Nerror + "','" + Globales.localIP + "')");
                 connection.CloseConnection();
             }
